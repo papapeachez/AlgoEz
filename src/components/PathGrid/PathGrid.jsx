@@ -106,9 +106,6 @@ export default class PathGrid extends Component {
         <center>
           <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('bfs')}>B F S</Button>
           <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('dijkstra')} >D I J K S T R A</Button>                    
-          <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('dfs')}>D F S</Button>
-          <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('greedy')} >G R E E D Y</Button>                    
-          <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('a')}>A*</Button>
           <br/>
           <Button className="gridControls" onClick={() => { this.visualize() }}>
             Visualize
