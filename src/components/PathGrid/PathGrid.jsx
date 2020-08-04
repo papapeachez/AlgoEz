@@ -51,17 +51,8 @@ export default class PathGrid extends Component {
     const finishNode = grid[FINISH_NODE_ROW][FINISH_NODE_COL];
     //call the dikes algorithm 
     var visitedNodesInOrder;
-    if (this.currentAlgo === 'greedy') {
-      visitedNodesInOrder = bfs(grid, startNode, finishNode);
-    }
-    else if (this.currentAlgo === 'dijkstra') {
+    if (this.currentAlgo === 'dijkstra') {
       visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
-    }
-    else if (this.currentAlgo === 'dfs') {
-      visitedNodesInOrder = bfs(grid, startNode, finishNode);
-    }
-    else if (this.currentAlgo === 'a') {
-      visitedNodesInOrder = bfs(grid, startNode, finishNode);
     }
     else { //bfs
       visitedNodesInOrder = bfs(grid, startNode, finishNode);
@@ -105,7 +96,7 @@ export default class PathGrid extends Component {
       <>
         <center>
           <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('bfs')}>B F S</Button>
-          <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('dijkstra')} >D I J K S T R A</Button>                    
+          <Button className= "algoButton" variant="dark" onClick={(e) => this.setAlgo('dijkstra')} >D I J K S T R A</Button>                     
           <br/>
           <Button className="gridControls" onClick={() => { this.visualize() }}>
             Visualize
